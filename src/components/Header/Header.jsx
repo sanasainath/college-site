@@ -1,15 +1,13 @@
-import "./Header.css";
-
-import Navbar from "../Navbar/Navbar";
-import TextBox from "../TextBox/TextBox";
+import Carousal from "../carousal/Carousal"
+import Navbar from "../Navbar/Navbar"
 
 const Header = () => {
   return (
-    <section className="header">
+    <>
       <Navbar />
-      <TextBox />
-    </section>
-  );
-};
+      <Carousal />
+    </>
+  )
+}
 
-export default Header;
+export default Header

@@ -1,5 +1,27 @@
-import "./Navbar.css";
+import Navbar1 from "./Navbar1"
+import Navbar2 from "./Navbar2"
+import Navbar3 from "./Navbar3"
 
+const Navbar = () => {
+  return (
+    <div className="sticky top-[0px] z-[5]">
+      <Navbar2 />
+      <Navbar3 />
+    </div>
+  )
+}
+
+export default Navbar
+
+
+
+
+
+
+
+
+
+/* import "./Navbar.css";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -24,7 +46,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
+    <nav className="border border-[red]">
       <Link to="/">
         <img src={logo} alt="" />
       </Link>
@@ -57,3 +79,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+ */
