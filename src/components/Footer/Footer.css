@@ -1,22 +1,92 @@
-/* Footer section styles */
+/* Footer general styles */
 .footer {
   width: 100%;
-  text-align: center;
-  padding: 30px 8%;
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 40px;
+  text-align: left;
 }
 
-.footer h4 {
-  margin-bottom: 25px;
-  margin-top: 20px;
+/* Use CSS grid to allocate 4 columns to footer-links and 8 to footer-map */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+  gap: 20px; /* Add gap between the grid items */
+}
+
+/* Footer links take 4 columns */
+.footer-links {
+  grid-column: span 4;
+}
+
+/* Footer map takes 8 columns */
+.footer-map {
+  grid-column: span 8;
+}
+
+.footer-links h4, .footer-map h4, .footer-contact h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-map iframe {
+  border: none;
+  width: 100%;      /* Ensures full width responsiveness */
+  height: 400px;    /* Increased height to 400px */
+}
+
+/* Footer Contact Styles */
+.footer-contact {
+  margin-top: 30px; /* Creates space between components */
+  font-size: 1rem;  /* Decreased font size for contact details */
+}
+
+.footer-contact p, .footer-contact a {
+  margin-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.0rem; /* Adjusted to a smaller font size */
+}
+
+.footer-contact a:hover {
+  color: #f44336; /* Hover color for email link */
+}
+
+/* Footer About and Icons */
+.footer-about {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-about h4 {
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-.footer p {
+.footer-about p {
   font-size: 1.2rem;
 }
 
-.footer .icons .fab {
+.icons {
+  margin-top: 30px; /* Adds space between links and icons */
+}
+
+.icons .fab {
   color: #f44336;
   margin: 0 13px;
   cursor: pointer;
@@ -27,4 +97,8 @@
 .fa-heart {
   color: #f44336;
   font-size: 1.2rem;
+}
+
+.footer-about p .fa-heart {
+  margin-left: 5px;
 }

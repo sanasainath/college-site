@@ -1,0 +1,120 @@
+.academic-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  min-height: 100vh; /* Ensure the section takes up the full viewport height */
+  
+}
+
+.academic-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-repeat: no-repeat; /* Prevent image repetition */
+  opacity: 0.08 ; /* Controls the opacity of the background */
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
+.academic-content {
+  display: flex;
+  max-width: 1400px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.academic-image {
+  flex: 1;
+}
+
+.academic-image img {
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+}
+
+.academic-text {
+  flex: 2;
+  padding-left:220px;
+  padding-top: 50px;
+
+  color: #333;
+}
+
+.academic-text h1, .academic-text h2 {
+  font-family: 'Arial', sans-serif;
+  color: #2C3E50;
+  margin: 0;
+}
+
+.academic-text h1 {
+  font-size: 28px; /* Slightly larger for emphasis */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.academic-text h2 {
+  font-size: 50px; /* Making college name bigger */
+  font-weight: bold;
+  color: #2E8B57; /* Darker green tone */
+}
+
+.academic-text p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.academic-text h3 {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.academic-text ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.academic-text ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 30px;
+  position: relative;
+}
+
+.academic-text ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+  .academic-content {
+    flex-direction: column;
+  }
+
+  .academic-text {
+    padding: 20px;
+  }
+
+  .academic-text h1 {
+    font-size: 22px;
+  }
+
+  .academic-text h2 {
+    font-size: 36px; /* Adjust for smaller screens */
+  }
+}
